@@ -1,6 +1,4 @@
-
 enviar.addEventListener('click', tabuada)
-
 function tabuada() {
    
     const numero = parseInt(document.getElementById('num').value);
@@ -8,7 +6,7 @@ function tabuada() {
     resul.textContent = "";
     
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 0; i <= 10; i++) {
        
         var resultado = numero * i;
         const p = document.createElement("p");
@@ -18,5 +16,4 @@ function tabuada() {
 
         resul.appendChild(p);
     }
-  
 }
