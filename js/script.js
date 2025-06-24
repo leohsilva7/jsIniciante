@@ -1,14 +1,22 @@
-const numero = parseInt(document.getElementById('num').value);
+
 enviar.addEventListener('click', tabuada)
 
 function tabuada() {
    
-
-    for (let i = 0; numero != 0; i++) {
-        while (i <= 10) {
-            var resultado = numero * i
-        }
-        resul.textContent = `Número ${numero} x ${i} = ${resultado}`
-    }
+    const numero = parseInt(document.getElementById('num').value);
+    const resul = document.getElementById('resul');
+    resul.textContent = "";
     
+
+    for (let i = 1; i <= 10; i++) {
+       
+        var resultado = numero * i;
+        const p = document.createElement("p");
+
+        p.textContent = `Número: ${numero} x ${i}
+        = ${resultado}`;
+
+        resul.appendChild(p);
+    }
+  
 }
